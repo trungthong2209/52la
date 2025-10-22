@@ -141,6 +141,21 @@ function addPlayerInput() {
     scoreInput.dataset.playerId = playerCount;
     scoreInput.value = '';
     
+    // Add color coding based on score value
+    scoreInput.addEventListener('input', (e) => {
+        const value = parseFloat(e.target.value);
+        if (value > 0) {
+            e.target.style.color = 'green';
+            e.target.style.fontWeight = 'bold';
+        } else if (value < 0) {
+            e.target.style.color = 'red';
+            e.target.style.fontWeight = 'bold';
+        } else {
+            e.target.style.color = '';
+            e.target.style.fontWeight = '';
+        }
+    });
+    
     // Append elements (no remove button for fixed 4 players)
     row.appendChild(playerDropdown);
     row.appendChild(scoreInput);
@@ -307,14 +322,15 @@ function showStatus(message, type) {
  * Reset form
  */
 function resetForm() {
-    // Clear player inputs
-    const container = document.getElementById('scoreInputs');
-    container.innerHTML = '';
-    playerCount = 0;
+    // Only clear the score values, keep the selected players
+    const rows = document.querySelectorAll('.score-input-row');
     
-    // Add exactly 4 player inputs
-    for (let i = 0; i < 4; i++) {
-        addPlayerInput();
-    }
+    rows.forEach(row => {
+        const scoreInput = row.querySelector('.player-score');
+        scoreInput.value = '';
+        // Reset color styling
+        scoreInput.style.color = '';
+        scoreInput.style.fontWeight = '';
+    });
 }
 

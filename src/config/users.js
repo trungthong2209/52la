@@ -8,7 +8,6 @@ module.exports = {
     'Winz',
     'Luffy',
     'Lucas',
-    'Finn',
     'Guma',
     'Kallen',
     'Strange'

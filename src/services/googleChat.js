@@ -33,8 +33,7 @@ class GoogleChatService {
       const message = {
         text: `🎮 *New Wild Card Game Result*\n\n` +
               `📅 Time: ${timestamp}\n\n` +
-              `*Scores:*\n${scoresText}\n\n` +
-              `👤 Submitted by: ${submittedBy}`
+          `*Scores:*\n${scoresText}\n\n`
       };
 
       // Send to Google Chat

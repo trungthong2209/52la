@@ -115,7 +115,7 @@ class GoogleSheetsService {
    * Get standard headers with all predefined users
    */
   getStandardHeaders() {
-    return ['Timestamp', ...users, 'Submitted By'];
+    return ['Timestamp', ...users];
   }
 
   /**

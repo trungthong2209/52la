@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Card Score Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Thể thao trí tuệ</h1>
+        </header>
+
+        <main>
+            <div class="card">
+                <h2>Record New Game</h2>
+
+                <!-- Score Input Section -->
+                <div class="form-group">
+                    <label>Player Scores</label>
+                    
+                    <div id="scoreInputs">
+                        <!-- Fixed 4 player inputs will be added here -->
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-actions">
+                    <button type="button" class="btn-primary" id="submitBtn">
+                        Submit Scores
+                    </button>
+                </div>
+
+                <!-- Status Message -->
+                <div id="statusMessage" class="status-message"></div>
+            </div>
+
+            <!-- Recent Submission (optional display) -->
+            <div class="card info-card" id="infoCard" style="display: none;">
+                <h3>✅ Last Submission</h3>
+                <div id="lastSubmission"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Connected to Google Sheets & Google Chat</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

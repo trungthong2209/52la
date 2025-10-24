@@ -10,8 +10,9 @@ module.exports = {
     'Lucas',
     'Guma',
     'Kallen',
-    'Strange'
-    'Jack'
+    'Strange',
+    'Jack',
+    'Hiroshi',
   ]
 };
 

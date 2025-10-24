@@ -11,6 +11,7 @@ module.exports = {
     'Guma',
     'Kallen',
     'Strange'
+    'Jack'
   ]
 };
 

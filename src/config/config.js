@@ -14,6 +14,6 @@ module.exports = {
   googleChat: {
     webhookUrl: process.env.GOOGLE_CHAT_WEBHOOK_URL
   },
-  timezone: process.env.TZ || 'UTC'
+  timezone: process.env.TZ || 'Asia/Bangkok'
 };
 
